@@ -1,9 +1,10 @@
 
 import React, { Component } from 'react';
-import { Image, View } from 'react-native';
+import { Image, View, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
 import { Container, Header, Content, Button, Icon, Left, Body, Right } from 'native-base';
+import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 
 import { openDrawer } from '../../actions/drawer';
 // import HeaderContent from './../headerContent/';
@@ -28,6 +29,13 @@ class BlankPage extends Component { // eslint-disable-line
   render() { // eslint-disable-line class-methods-use-this
     return (
       <Container theme={theme}>
+        <Header>
+            <Left>
+              <Button transparent style={styles.btnHeader} onPress={this.props.openDrawer} >
+                <Icon active name="menu" />
+              </Button>
+            </Left>
+          </Header>
         <Content>
             <View style={{flexDirection: 'row', padding: 20, position: 'absolute', backgroundColor: 'rgba(255,255,255,0.1)', zIndex: 1000}}>
               <TouchableOpacity style={{flexDirection: 'row', marginRight: 30}}>
