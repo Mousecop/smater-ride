@@ -14,7 +14,7 @@ import Profile from './components/profile';
 import BlankPage from './components/blankPage/';
 import SideBar from './components/sideBar';
 import { statusBarColor } from './themes/base-theme';
-
+import ShareCodes from './components/shareCodes';
 
 const RouterWithRedux = connect()(Router);
 
@@ -86,6 +86,7 @@ class AppNavigator extends Component {
             <Scene key="blankPage" component={BlankPage} />
             <Scene key="userProfileForm" component={UserProfileForm} />
             <Scene key="profile" component={Profile} />
+            <Scene key="shareCodes" component={ShareCodes} />
           </Scene>
         </RouterWithRedux>
       </Drawer>
