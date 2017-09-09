@@ -35,6 +35,16 @@ class SideBar extends Component {
                 <Icon name="keypad" />
                 <Text style={styles.linkText}>BLANK PAGE</Text>
               </ListItem>
+
+              <ListItem
+                button iconLeft
+                onPress={() => { Actions.profile(); this.props.closeDrawer(); }}
+                style={styles.links}
+              >
+                <Icon name="keypad" />
+                <Text style={styles.linkText}>Profile</Text>
+              </ListItem>
+
           </Content>
         </Image>
       </Container>

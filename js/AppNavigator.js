@@ -10,6 +10,7 @@ import { closeDrawer } from './actions/drawer';
 import Login from './components/login/';
 import UserProfileForm from './components/user-profile-form';
 import Home from './components/home/';
+import Profile from './components/profile';
 import BlankPage from './components/blankPage/';
 import SideBar from './components/sideBar';
 import { statusBarColor } from './themes/base-theme';
@@ -84,6 +85,7 @@ class AppNavigator extends Component {
             <Scene key="home" component={Home} />
             <Scene key="blankPage" component={BlankPage} />
             <Scene key="userProfileForm" component={UserProfileForm} />
+            <Scene key="profile" component={Profile} />
           </Scene>
         </RouterWithRedux>
       </Drawer>
