@@ -42,6 +42,24 @@ class SideBar extends Component {
               <Icon name='md-person' />
               <Text style={styles.linkText}>Profile</Text>
               </ListItem>
+
+              <ListItem
+                button iconLeft
+                onPress={() => { Actions.profile(); this.props.closeDrawer(); }}
+                style={styles.links}
+              >
+                <Icon name="keypad" />
+                <Text style={styles.linkText}>Profile</Text>
+              </ListItem>
+
+              <ListItem
+                button iconLeft
+                onPress={() => { Actions.shareCodes(); this.props.closeDrawer(); }}
+                style={styles.links}>
+                <Icon name="keypad" />
+                <Text style={styles.linkText}>Share Codes</Text>
+              </ListItem>
+
           </Content>
       </Container>
     );

@@ -18,14 +18,41 @@ var rider1 = require("../config/rider1");
 var rider2 = require("../config/rider2");
 var rider3 = require("../config/rider3");
 
+<<<<<<< HEAD
 import { openDrawer } from "../../actions/drawer";
+=======
+import React, { Component } from 'react';
+import { Image, View, TouchableOpacity } from 'react-native';
+import { connect } from 'react-redux';
+import { Actions } from 'react-native-router-flux';
+import { Container, Header, Content, Button, Icon, Left, Body, Right } from 'native-base';
+import MapView, { PROVIDER_GOOGLE } from 'react-native-maps'
+
+
+import { openDrawer } from '../../actions/drawer';
+>>>>>>> b177c8489e33909f0d16834d040e1b61cdb62249
 // import HeaderContent from './../headerContent/';
 
 import theme from "../../themes/base-theme";
 import styles from "./styles";
 
+<<<<<<< HEAD
 const headerLogo = require("../../../images/Header-Logo.png");
 const glow2 = require("../../../images/glow2.png");
+=======
+const mapStyle = [
+  {
+    "featureType": "road",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  }
+]
+
+class BlankPage extends Component { // eslint-disable-line
+>>>>>>> b177c8489e33909f0d16834d040e1b61cdb62249
 
 class BlankPage extends Component {
   // eslint-disable-line
@@ -47,7 +74,18 @@ class BlankPage extends Component {
       estTime: false
     };
   }
+  constructor(){
+    super();
+    this.state = {
+        presssBtn: 'white',
+        notPressBtn: 'rgba(255,255,255,0.0)',
+        name: ''
+    }
+}
 
+  componentDidMount(){
+
+<<<<<<< HEAD
   componentDidMount() {
     fetch(
       "http://developer.itsmarta.com/RealtimeTrain/RestServiceNextTrain/GetRealtimeArrivals?apikey=eda9f740-8b7e-4071-a680-821a1c3396fe",
@@ -124,6 +162,16 @@ class BlankPage extends Component {
       .catch(error => {
         console.error(error);
       });
+=======
+    return fetch('http://66.228.50.212/main_smart_rider.js')
+    .then((response) => response.json())
+    .then((responseJson) => {
+        console.log(responseJson.firstname)
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+>>>>>>> b177c8489e33909f0d16834d040e1b61cdb62249
   }
 
   async getDirections(startLoc, destinationLoc, mode) {
@@ -206,12 +254,17 @@ class BlankPage extends Component {
     // console.log(this.state.coords);
     return (
       <Container theme={theme}>
+<<<<<<< HEAD
         {/* <Header>
+=======
+        <Header>
+>>>>>>> b177c8489e33909f0d16834d040e1b61cdb62249
             <Left>
               <Button transparent style={styles.btnHeader} onPress={this.props.openDrawer} >
                 <Icon active name="menu" />
               </Button>
             </Left>
+<<<<<<< HEAD
           </Header> */}
         <Content>
           <View
@@ -390,6 +443,38 @@ class BlankPage extends Component {
             </View>
           </View>
         </Content>
+=======
+          </Header>
+        <Content>
+            <View style={{flexDirection: 'row', paddingLeft: 20, paddingRight: 20, paddingTop: 7, paddingBottom: 7, backgroundColor: '#0383C1', zIndex: 1000, justifyContent: 'space-between'}}>
+              <TouchableOpacity style={{paddingTop: 5, paddingBottom: 5, flexDirection: 'row', marginRight: 30, backgroundColor: this.state.notPressBtn, paddingLeft: 10, paddingRight:10, alignItems: 'center', justifyContent: 'center', borderRadius: 5}}>
+                <Icon name="md-car" style={{color: 'black', paddingRight: 10, fontSize: 20}} />
+                <Icon name="md-train" style={{color: 'black', fontSize: 20}} />
+              </TouchableOpacity>
+              <TouchableOpacity style={{paddingTop: 5, paddingBottom: 5, flexDirection: 'row', marginRight: 30, backgroundColor: this.state.notPressBtn, paddingLeft: 10, paddingRight:10, alignItems: 'center', justifyContent: 'center', borderRadius: 5}}>
+                <Icon name="md-bus" style={{color: 'black', paddingRight: 10, fontSize: 20}} />
+                <Icon name="md-train" style={{color: 'black', fontSize: 20}} />
+              </TouchableOpacity>
+              <TouchableOpacity style={{paddingTop: 5, paddingBottom: 5, flexDirection: 'row', marginRight: 30, backgroundColor: this.state.notPressBtn, paddingLeft: 10, paddingRight:10, alignItems: 'center', justifyContent: 'center', borderRadius: 5}}>
+                <Icon name="md-walk" style={{color: 'black', paddingRight: 10,  fontSize: 20}} />
+                <Icon name="md-train" style={{color: 'black', fontSize: 20}} />
+              </TouchableOpacity>
+            </View>
+              <MapView
+              ref="map"
+              customMapStyle={mapStyle}
+              style={{height: 600, width: '100%'}}
+              provider={PROVIDER_GOOGLE}
+              region={{
+                latitude: 33.937640,
+                longitude: -84.380100,
+                latitudeDelta: 0.319429,
+                longitudeDelta: 0.62392,
+              }}>
+        
+            </MapView>
+            </Content>
+>>>>>>> b177c8489e33909f0d16834d040e1b61cdb62249
       </Container>
     );
   }
