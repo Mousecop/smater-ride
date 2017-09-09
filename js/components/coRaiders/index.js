@@ -13,26 +13,29 @@ const signUp = require('../../../images/BG-signUp.png');
 const headerLogo = require('../../../images/Header-Logo.png');
 
 
-class ShareCodes extends Component {
+class CoRaiders extends Component {
   state = {
      names: [
         {
            id: 0,
-           name: 'Share Code - XYZABC',
+           name: 'Raider Name -1',
+           time: '10:30 AM'
         },
         {
            id: 1,
-           name: 'Share Code-123456',
+           name: 'Raider Name -2',
+           time: '10:35 AM'
         },
         {
            id: 2,
-           name: 'Share Code-wwATL',
+           name: 'Raider Name -3',
+           time: '10:40 AM'
         }
      ]
   }
 
   alertItemName = (item) => {
-     Actions.coRaiders();
+    // alert('Booked - '+item.name)
   }
   render() {
      return (
@@ -46,9 +49,6 @@ class ShareCodes extends Component {
       </Header>
       <Content padder>
       <View> 
-      <Text>
-                      RRR
-       </Text>
            {
               this.state.names.map((item, index) => (
                  <TouchableOpacity
@@ -57,7 +57,10 @@ class ShareCodes extends Component {
                     onPress = {() => this.alertItemName(item)}>
                     
                     <Text style = {styles.text}>
-                       {item.name}
+                       {item.name} 
+                    </Text>
+                    <Text style = {styles.text}>
+                       {item.time} 
                     </Text>
                  </TouchableOpacity>
               ))
@@ -79,7 +82,7 @@ const mapStateToProps = state => ({
   navigation: state.cardNavigation,
 });
 
-export default connect(mapStateToProps, bindAction)(ShareCodes);
+export default connect(mapStateToProps, bindAction)(CoRaiders);
 
  
 
@@ -91,6 +94,6 @@ const styles = StyleSheet.create ({
      alignItems: 'center',
   },
   text: {
-     color: '#FF0000'
+     color: '#00FF00'
   }
 })

@@ -15,7 +15,8 @@ import BlankPage from './components/blankPage/';
 import SideBar from './components/sideBar';
 import { statusBarColor } from './themes/base-theme';
 import ShareCodes from './components/shareCodes';
-
+import CoRaiders from './components/coRaiders';
+ 
 const RouterWithRedux = connect()(Router);
 
 class AppNavigator extends Component {
@@ -87,6 +88,7 @@ class AppNavigator extends Component {
             <Scene key="userProfileForm" component={UserProfileForm} />
             <Scene key="profile" component={Profile} />
             <Scene key="shareCodes" component={ShareCodes} />
+            <Scene key="coRaiders" component={CoRaiders} />
           </Scene>
         </RouterWithRedux>
       </Drawer>
