@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Image } from 'react-native';
+import { Image, View } from 'react-native';
 import { Container, Content, Text, Icon, ListItem } from 'native-base';
 
 import { Actions } from 'react-native-router-flux';
@@ -15,15 +15,14 @@ class SideBar extends Component {
 
   render() {
     return (
-      <Container>
-        <Image source={singUp} style={styles.background} >
+      <Container style={{ backgroundColor: '#0383C1' }}s>
           <Content style={styles.drawerContent}>
               <ListItem
                 button iconLeft
                 onPress={() => { Actions.home(); this.props.closeDrawer(); }}
                 style={styles.links}
               >
-                <Icon name="grid" />
+                <Icon name="home" />
                 <Text style={styles.linkText} >HOME</Text>
               </ListItem>
 
@@ -32,8 +31,8 @@ class SideBar extends Component {
                 onPress={() => { Actions.blankPage(); this.props.closeDrawer(); }}
                 style={styles.links}
               >
-                <Icon name="keypad" />
-                <Text style={styles.linkText}>BLANK PAGE</Text>
+                <Icon name="map" />
+                <Text style={styles.linkText}>MAP</Text>
               </ListItem>
               <ListItem
                 button iconLeft
@@ -44,7 +43,6 @@ class SideBar extends Component {
               <Text style={styles.linkText}>Profile</Text>
               </ListItem>
           </Content>
-        </Image>
       </Container>
     );
   }

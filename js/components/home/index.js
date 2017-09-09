@@ -28,7 +28,7 @@ class Home extends Component {  // eslint-disable-line
   render() {
     return (
       <Container theme={theme}>
-          <Header>
+          <Header style={{ backgroundColor: '#84C3E2' }}>
             <Left>
               <Button transparent style={styles.btnHeader} onPress={this.props.openDrawer} >
                 <Icon active name="menu" />

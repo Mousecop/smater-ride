@@ -55,6 +55,7 @@ export default {
     marginTop: 10,
     height: 50,
     alignItems: 'center',
+    backgroundColor: '#84C3E2',
   },
   helpBtns: {
     opacity: 0.9,

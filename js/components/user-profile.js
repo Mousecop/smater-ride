@@ -30,13 +30,17 @@ import * as firebase from "firebase";
 class UserProfile extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+        workAddress: this.props.profileData.workAddress,
+        homeAddress: this.props.profileData.homeAddress,
+    }
   }
 
   render() {
     const props = this.props.profileData;
     return (
       <View>
-        <Header style={{ backgroundColor: '#0383C1', height: 60 }}>
+        <Header style={{ backgroundColor: '#84C3E2', height: 60 }}>
           <Left>
             <Button transparent />
           </Left>
@@ -69,7 +73,7 @@ class UserProfile extends Component {
             />
             <Text style={{ color: 'black' }}>
               Home -{' '}
-              <Text style={{ color: '#F67423' }}>{props.homeAddress}</Text>
+              <Text style={{ color: '#F67423' }}>{props.homeAddress || this.state.homeAddress}</Text>
             </Text>
           </View>
           <View
@@ -85,7 +89,7 @@ class UserProfile extends Component {
             />
             <Text style={{ color: 'black' }}>
               Work -{' '}
-              <Text style={{ color: '#F67423' }}>{props.workAddress}</Text>
+              <Text style={{ color: '#F67423' }}>{props.workAddress || this.state.workAddress}</Text>
             </Text>
           </View>
           <TouchableOpacity onPress={() => Actions.martaAccount()}>

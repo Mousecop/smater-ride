@@ -30,7 +30,7 @@ class MartaAccount extends Component {
   render() {
     return (
       <View>
-        <Header style={{ backgroundColor: '#0383C1', height: 60 }}>
+        <Header style={{ backgroundColor: '#84C3E2', height: 60 }}>
           <Left>
             <Icon
               andriod="android-arrow-back"

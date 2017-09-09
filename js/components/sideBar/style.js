@@ -15,6 +15,7 @@ export default {
   },
   linkText: {
     paddingLeft: 15,
+    color: 'white',
   },
   logoutContainer: {
     padding: 30,
@@ -29,7 +30,7 @@ export default {
     flex: 1,
     width: null,
     height: null,
-    backgroundColor: primary,
+    // backgroundColor: primary,
   },
   drawerContent: {
     paddingTop: Platform.OS === 'android' ? 20 : 30,
