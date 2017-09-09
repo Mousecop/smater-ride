@@ -27,26 +27,34 @@ class BlankPage extends Component { // eslint-disable-line
 
   render() { // eslint-disable-line class-methods-use-this
     return (
-      <Container theme={theme} style={{ backgroundColor: '#01cfa1' }}>
-        <Image source={glow2} style={styles.container} >
-          <Header>
-            <Left>
-              <Button transparent style={styles.btnHeader} onPress={() => Actions.pop()}>
-                <Icon active name="arrow-back" />
-              </Button>
-            </Left>
-            <Body>
-              <Image source={headerLogo} style={styles.imageHeader} />
-            </Body>
-            <Right>
-              <Button transparent style={styles.btnHeader} onPress={this.props.openDrawer} >
-                <Icon active name="menu" />
-              </Button>
-            </Right>
-          </Header>
-
-          <Content />
-        </Image>
+      <Container theme={theme}>
+        <Content>
+            <View style={{flexDirection: 'row', padding: 20, position: 'absolute', backgroundColor: 'rgba(255,255,255,0.1)', zIndex: 1000}}>
+              <TouchableOpacity style={{flexDirection: 'row', marginRight: 30}}>
+                <Icon name="md-car" style={{color: 'black', paddingRight: 10}} />
+                <Icon name="md-train" style={{color: 'black'}} />
+              </TouchableOpacity>
+              <TouchableOpacity style={{flexDirection: 'row', marginRight: 30}}>
+                <Icon name="md-bus" style={{color: 'black', paddingRight: 10}} />
+                <Icon name="md-train" style={{color: 'black'}} />
+              </TouchableOpacity>
+              <TouchableOpacity style={{flexDirection: 'row', marginRight: 30}}>
+                <Icon name="md-walk" style={{color: 'black', paddingRight: 10}} />
+                <Icon name="md-train" style={{color: 'black'}} />
+              </TouchableOpacity>
+            </View>
+              <MapView
+              ref="map"
+              style={{height: 400, width: '100%'}}
+              region={{
+                latitude: 33.937640,
+                longitude: -84.380100,
+                latitudeDelta: 0.319429,
+                longitudeDelta: 0.62392,
+              }}>
+        
+            </MapView>
+            </Content>
       </Container>
     );
   }

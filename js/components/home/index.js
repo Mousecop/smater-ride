@@ -10,6 +10,8 @@ import { openDrawer } from '../../actions/drawer';
 import theme from '../../themes/base-theme';
 import styles from './styles';
 
+import UserProfileForm from '../user-profile-form';
+
 
 const signUp = require('../../../images/BG-signUp.png');
 const headerLogo = require('../../../images/Header-Logo.png');
@@ -33,33 +35,8 @@ class Home extends Component {  // eslint-disable-line
               </Button>
             </Left>
           </Header>
-
-          <Content>
-            <View style={{flexDirection: 'row', padding: 20, position: 'absolute', backgroundColor: 'rgba(255,255,255,0.1)', zIndex: 1000}}>
-              <TouchableOpacity style={{flexDirection: 'row', marginRight: 30}}>
-                <Icon name="md-car" style={{color: 'black', paddingRight: 10}} />
-                <Icon name="md-train" style={{color: 'black'}} />
-              </TouchableOpacity>
-              <TouchableOpacity style={{flexDirection: 'row', marginRight: 30}}>
-                <Icon name="md-bus" style={{color: 'black', paddingRight: 10}} />
-                <Icon name="md-train" style={{color: 'black'}} />
-              </TouchableOpacity>
-              <TouchableOpacity style={{flexDirection: 'row', marginRight: 30}}>
-                <Icon name="md-walk" style={{color: 'black', paddingRight: 10}} />
-                <Icon name="md-train" style={{color: 'black'}} />
-              </TouchableOpacity>
-            </View>
-              <MapView
-              ref="map"
-              style={{height: 400, width: '100%'}}
-              region={{
-                latitude: 33.937640,
-                longitude: -84.380100,
-                latitudeDelta: 0.319429,
-                longitudeDelta: 0.62392,
-              }}>
-        
-            </MapView>
+          <Content padder>
+            <UserProfileForm />
           </Content>
       </Container>
     );
