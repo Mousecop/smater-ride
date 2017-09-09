@@ -1,0 +1,2 @@
+var accessToken = "Bearer KA.eyJ2ZXJzaW9uIjoyLCJpZCI6ImE5UUQzZytaVC9hd1hFTEFPcTRHTHc9PSIsImV4cGlyZXNfYXQiOjE1MDc1MTU4NzUsInBpcGVsaW5lX2tleV9pZCI6Ik1RPT0iLCJwaXBlbGluZV9pZCI6MX0.LXmuc5-Ctwfv-htZPEYlWTeF-8AGz16y3rAkHxAbd5k";
+module.exports = accessToken;
