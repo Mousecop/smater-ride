@@ -10,6 +10,8 @@ import { openDrawer } from '../../actions/drawer';
 import theme from '../../themes/base-theme';
 import styles from './styles';
 
+import UserProfileForm from '../user-profile-form';
+
 
 const signUp = require('../../../images/BG-signUp.png');
 const headerLogo = require('../../../images/Header-Logo.png');
@@ -36,7 +38,8 @@ class Home extends Component {  // eslint-disable-line
           </Header>
 
           <Content padder>
-            <Text style={styles.text}>Create something awesome . . .</Text>
+            {/* <Text style={styles.text}>Create something awesome . . .</Text> */}
+            <UserProfileForm />
           </Content>
         </Image>
       </Container>
