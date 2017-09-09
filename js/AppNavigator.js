@@ -8,10 +8,12 @@ import { Router, Scene } from 'react-native-router-flux';
 import { closeDrawer } from './actions/drawer';
 
 import Login from './components/login/';
-import UserProfileForm from './components/user-profile-form';
+import UserProfile from './components/user-profile';
 import Home from './components/home/';
 import BlankPage from './components/blankPage/';
 import SideBar from './components/sideBar';
+import MartaAccount from './components/marta-account';
+import UberAccount from './components/uber-account';
 import { statusBarColor } from './themes/base-theme';
 
 
@@ -83,8 +85,10 @@ class AppNavigator extends Component {
             <Scene key="login" component={Login} hideNavBar initial />
             <Scene key="home" component={Home} />
             <Scene key="blankPage" component={BlankPage} />
-            <Scene key="userProfileForm" component={UserProfileForm} />
+            <Scene key="userProfile" component={UserProfile} />
           </Scene>
+          <Scene key="martaAccount" component={MartaAccount} hideNavBar />
+          <Scene key="uberAccount" component={UberAccount} hideNavBar sceneStyle={{ backgroundColor: '#545454' }} />
         </RouterWithRedux>
       </Drawer>
     );
