@@ -122,6 +122,21 @@ class UserProfile extends Component {
               <Text style={{ color: 'black' }}>Uber Authorization</Text>
             </View>
           </TouchableOpacity>
+          <TouchableOpacity onPress={() => Actions.blankPage()}>
+            <View
+              style={{
+                flexDirection: 'row',
+                alignItems: 'center',
+                marginVertical: 15,
+              }}
+            >
+              <Icon
+                name="map"
+                style={{ color: 'black', marginHorizontal: 10 }}
+              />
+              <Text style={{ color: 'black' }}>Map Destination</Text>
+            </View>
+          </TouchableOpacity>
         </View>
       </View>
     );

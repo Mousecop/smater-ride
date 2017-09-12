@@ -9,7 +9,9 @@ import { closeDrawer } from './actions/drawer';
 
 import Login from './components/login/';
 import UserProfile from './components/user-profile';
+import UserProfileForm from './components/user-profile-form';
 import Home from './components/home/';
+import Details from './components/details';
 import Profile from './components/profile';
 import BlankPage from './components/blankPage/';
 import SideBar from './components/sideBar';
@@ -86,15 +88,16 @@ class AppNavigator extends Component {
           <Scene key="root">
             <Scene key="login" component={Login} hideNavBar initial />
             <Scene key="home" component={Home} />
-            <Scene key="blankPage" component={BlankPage} />
-            <Scene key="userProfile" component={UserProfile} />
             <Scene key="userProfileForm" component={UserProfileForm} />
             <Scene key="profile" component={Profile} />
             <Scene key="shareCodes" component={ShareCodes} />
             <Scene key="coRaiders" component={CoRaiders} />
           </Scene>
+          <Scene key="blankPage" component={BlankPage} hideNavBar/>
           <Scene key="martaAccount" component={MartaAccount} hideNavBar />
           <Scene key="uberAccount" component={UberAccount} hideNavBar sceneStyle={{ backgroundColor: '#545454' }} />
+          <Scene key="details" component={Details} hideNavBar hideTabBar/>
+          <Scene key="userProfile" component={UserProfile} />
         </RouterWithRedux>
       </Drawer>
     );

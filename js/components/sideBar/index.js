@@ -45,15 +45,6 @@ class SideBar extends Component {
 
               <ListItem
                 button iconLeft
-                onPress={() => { Actions.profile(); this.props.closeDrawer(); }}
-                style={styles.links}
-              >
-                <Icon name="keypad" />
-                <Text style={styles.linkText}>Profile</Text>
-              </ListItem>
-
-              <ListItem
-                button iconLeft
                 onPress={() => { Actions.shareCodes(); this.props.closeDrawer(); }}
                 style={styles.links}>
                 <Icon name="keypad" />
